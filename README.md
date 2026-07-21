@@ -5,7 +5,7 @@ This is intended to work with existing CI artifacts and infrastructure, and with
 
 Binstall works by fetching the crate information from `crates.io` and searching the linked `repository` for matching releases and artifacts, falling back to the [quickinstall](https://github.com/alsuren/cargo-quickinstall) third-party artifact host, to alternate targets as supported, and finally to `cargo install` as a last resort.
 
-[![CI build](https://github.com/cargo-bins/cargo-binstall/actions/workflows/ci.yml/badge.svg)](https://github.com/cargo-bins/cargo-binstall/actions)
+[![CI build](https://github.com/Unity-Billal-mesloub/cargo-binstall/actions/workflows/ci.yml/badge.svg)](https://github.com/Unity-Billal-mesloub/cargo-binstall/actions)
 [![GitHub tag](https://img.shields.io/github/tag/cargo-bins/cargo-binstall.svg)](https://github.com/cargo-bins/cargo-binstall/releases)
 [![Crates.io](https://img.shields.io/crates/v/cargo-binstall.svg)](https://crates.io/crates/cargo-binstall)
 
@@ -64,14 +64,14 @@ Download the relevant package for your system below, unpack it, and move the `ca
 
 | OS      | Arch    | URL                                                          |
 | ------- | ------- | ------------------------------------------------------------ |
-| Linux   | x86\_64 | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz |
-| Linux   | armv7   | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-armv7-unknown-linux-musleabihf.tgz |
-| Linux   | arm64   | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-unknown-linux-musl.tgz |
-| Mac     | Intel   | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-apple-darwin.zip |
-| Mac     | Apple Silicon | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-apple-darwin.zip |
-| Mac     | Universal<br>(both archs) | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-universal-apple-darwin.zip |
-| Windows | Intel/AMD | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-pc-windows-msvc.zip |
-| Windows | ARM 64 | https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-pc-windows-msvc.zip |
+| Linux   | x86\_64 | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz |
+| Linux   | armv7   | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-armv7-unknown-linux-musleabihf.tgz |
+| Linux   | arm64   | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-unknown-linux-musl.tgz |
+| Mac     | Intel   | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-apple-darwin.zip |
+| Mac     | Apple Silicon | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-apple-darwin.zip |
+| Mac     | Universal<br>(both archs) | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-universal-apple-darwin.zip |
+| Windows | Intel/AMD | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-pc-windows-msvc.zip |
+| Windows | ARM 64 | https://github.com/Unity-Billal-mesloub/cargo-binstall/releases/latest/download/cargo-binstall-aarch64-pc-windows-msvc.zip |
 
 ### From source
 
@@ -97,12 +97,12 @@ For more features, we recommend the excellent [taiki-e/install-action](https://g
 
 These are useful *third-party* tools which work well with Binstall.
 
-### [`cargo-update`](https://github.com/nabijaczleweli/cargo-update)
+### [`cargo-update`](https://github.com/Unity-Billal-mesloub/cargo-update)
 
 While you can upgrade crates explicitly by running `cargo binstall` again, `cargo-update` takes care of updating all tools as needed.
 It automatically uses Binstall to install the updates if it is present.
 
-### [`cargo-run-bin`](https://github.com/dustinblackman/cargo-run-bin)
+### [`cargo-run-bin`](https://github.com/Unity-Billal-mesloub/cargo-run-bin)
 
 Binstall and `cargo install` both install tools globally by default, which is fine for system-wide tools.
 When installing tooling for a project, however, you may prefer to both scope the tools to that project and control their versions in code.
@@ -112,7 +112,7 @@ When Binstall is available, it installs from binary whenever possible... and you
 ## Unsupported crates
 
 Binstall is generally smart enough to auto-detect artifacts in most situations.
-However, if a package fails to install, you can manually specify the `pkg-url`, `bin-dir`, and `pkg-fmt` as needed at the command line, with values as documented in [SUPPORT.md](https://github.com/cargo-bins/cargo-binstall/blob/main/SUPPORT.md).
+However, if a package fails to install, you can manually specify the `pkg-url`, `bin-dir`, and `pkg-fmt` as needed at the command line, with values as documented in [SUPPORT.md](https://github.com/Unity-Billal-mesloub/cargo-binstall/blob/main/SUPPORT.md).
 
 ```console
 $ cargo-binstall \
@@ -121,11 +121,11 @@ $ cargo-binstall \
   crate_name
 ```
 
-Maintainers wanting to make their users' life easier can add [explicit Binstall metadata](https://github.com/cargo-bins/cargo-binstall/blob/main/SUPPORT.md) to `Cargo.toml` to locate the appropriate binary package for a given version and target.
+Maintainers wanting to make their users' life easier can add [explicit Binstall metadata](https://github.com/Unity-Billal-mesloub/cargo-binstall/blob/main/SUPPORT.md) to `Cargo.toml` to locate the appropriate binary package for a given version and target.
 
 ## Signatures
 
-We have initial, limited [support](https://github.com/cargo-bins/cargo-binstall/blob/main/SIGNING.md) for maintainers to specify a signing public key and where to find package signatures.
+We have initial, limited [support](https://github.com/Unity-Billal-mesloub/cargo-binstall/blob/main/SIGNING.md) for maintainers to specify a signing public key and where to find package signatures.
 With this enabled, Binstall will download and verify signatures for that package.
 
 You can use `--only-signed` to refuse to install packages if they're not signed.
@@ -144,8 +144,8 @@ Also, there's this great and woefully underused (IMO) `[package.metadata]` field
 ### Is this secure?
 Yes and also no?
 
-We have [initial support](https://github.com/cargo-bins/cargo-binstall/blob/main/SIGNING.md) for verifying signatures, but not a lot of the ecosystem produces signatures at the moment.
-See [#1](https://github.com/cargo-bins/cargo-binstall/issues/1) to discuss more on this.
+We have [initial support](https://github.com/Unity-Billal-mesloub/cargo-binstall/blob/main/SIGNING.md) for verifying signatures, but not a lot of the ecosystem produces signatures at the moment.
+See [#1](https://github.com/Unity-Billal-mesloub/cargo-binstall/issues) to discuss more on this.
 
 We always pull the metadata from crates.io over HTTPS, and verify the checksum of the crate tar.
 We also enforce using HTTPS with TLS >= 1.2 for the actual download of the package files.
@@ -165,7 +165,6 @@ Some crate installation strategies may collect anonymized usage statistics by de
 Currently, only the name of the crate to be installed, its version, the target platform triple, and the collecting user agent are sent to endpoints under the `https://cargo-quickinstall-stats-server.fly.dev/record-install` URL when the `quickinstall` artifact host is used.
 The maintainers of the `quickinstall` project use this data to determine which crate versions are most worthwhile to build and host.
 The aggregated collected telemetry is publicly accessible at <https://alsuren.grafana.net/public-dashboards/12d4ec3edf2548a1850a813e00592b53>.
-Should you be interested on it, the backend code for these endpoints can be found at <https://github.com/cargo-bins/cargo-quickinstall/tree/main/stats-server>.
 
 If you prefer not to participate in this data collection, you can opt out by any of the following methods:
 
